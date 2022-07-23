@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSite Com Efeito Parallax | Vanilla Javascript</title>
+        <link rel="stylesheet" type="text/css" href="./Css/style.css">
+    </head>
+    <body>
+        <header id="header">
+            <a href="#" class="logo"> <img src="./img/logo.png" /></a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Nosso Mundo</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="./img/background.png" id="background">
+            <h2 id="text"><span>Comece a sua </span><br>Aventura</h2>
+            <img src="./img/bird1.png" id="bird1">
+            <img src="./img/bird2.png" id="bird2">
+            <img src="./img/forest2.png" id="forest">
+            <a href="#" id="btn">Esplorar</a>
+            
+            <img src="./img/rocks.png" id="rocks">
+            <img src="./img/bike.png" id="bike">
+            <img src="./img/water.png" id="water">
+        </section>
+        <div class="sec">
+            <h2>Cyber City Role Play</h2>
+            <p>
+                Por que você usa?
+O texto de preenchimento Lorem ipum é utilizado por designers gráficos, programadores e impressoras com o objetivo de ocupar os espaços de um site, um produto publicitário ou uma produção editorial cujo texto final ainda não está pronto.
+Este expediente serve para ter uma idéia do produto final que em breve será impresso ou divulgado por canais digitais.
+
+Para ter um resultado que está de acordo com o resultado final, os designers gráficos, designers ou tipógrafos informam o texto de Lorem ipsum em relação a dois aspectos fundamentais, a saber, a legibilidade e os requisitos editoriais.
+
+A escolha da fonte e do tamanho da fonte com o qual o Lorem ipsum é reproduzido responde a necessidades específicas que vão além do preenchimento simples e simples de espaços dedicados a aceitar textos reais e que permitem a entrega de um produto publicitário/editorial, Tanto na web como no papel, é verdade à realidade.
+
+Seu absurdo permite que o olho se concentre apenas no layout gráfico que objetivamente avalie as escolhas estilísticas de um projeto, por isso é instalado em muitos programas gráficos em muitas plataformas de software de publicação pessoal e sistema de gerenciamento de conteúdo.
+
+A versão mais usada do Lorem Ipsum
+« Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. »
+            </p>
+        </div>
+
+        <script>
+            let text = document.getElementById('text');
+            let bird1 = document.getElementById('bird1');
+            let bird2 = document.getElementById('bird2');
+            let btn = document.getElementById('btn');
+            let bike = document.getElementById('bike');
+            let rocks = document.getElementById('rocks');
+            let forest = document.getElementById('forest');
+            let water = document.getElementById('water');
+            let header = document.getElementById('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+
+                text.style.top = 50 + value * -0.5 + '%';
+                bird1.style.top = value * -1.5 + 'px';
+                bird1.style.left = value * 2 + 'px';
+                bird2.style.top = value * -1.5 + 'px';
+                bird2.style.left = value * -5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                bike.style.top = value * -0.1 + 'px';
+                bike.style.left = value * -0.2 + 'px';
+                rocks.style.top = value * -0.12 + 'px';
+                forest.style.top = value * 0.25 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+            
+        </script>
+    </body>
+</html>
